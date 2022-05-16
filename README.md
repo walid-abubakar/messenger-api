@@ -209,8 +209,8 @@ Service layer unit tests are written but controllers need more love (time didn't
 
 ## Design
 * I decided to go with postgres here but one can argue choosing horizontally scalable databases like Cassandra and MangoDB might be more optimal due to the heavy writes when scaled.
-* The current implementation to limit the size of the message to 100 and less than 30 days isn't what I would proudly take to prod.
-  * We can leverage build in functions of our database to limit the size of messages
+* The current implementation to limit the size of the messages to 100 and less than 30 days isn't what I would proudly take to prod.
+  * We can leverage built-in functions of our database to limit the size of messages
   * The same can be done with expiring data based on how old it is
   * Pagination might be an option too, maybe populate each page with 100 messages
 * For an ideal messaging application, we might consider storing already delivered messages on the client's phone/device
